@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView Info;
     private Button login;
     private int counter =5;
+    private TextView userRegistration ;
 
 
     @Override
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         Info = (TextView) findViewById(R.id.tvInfo);
         login = (Button) findViewById(R.id.btnLogin);
 
+        userRegistration = (TextView)findViewById(R.id.tvRegister);
+
         Info.setText("No of attemps remaining: 5");
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        userRegistration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
+            }
+        });
 
     }
 

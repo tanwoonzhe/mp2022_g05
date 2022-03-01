@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222916171810",
+    "project_id": "mp2022-g05-login",
+    "storage_bucket": "mp2022-g05-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222916171810:android:1274ccf895153f0502527b",
+        "android_client_info": {
+          "package_name": "com.example.mp2022_g05"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222916171810-uic50vj74pqsdt9k24gus9sdv8h7e2ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm7joZwaAKFfLZZ4DblOa8BEUKJd_iEdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222916171810-uic50vj74pqsdt9k24gus9sdv8h7e2ov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
