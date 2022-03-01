@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mp2022_g05">
         <activity
+            android:name=".RegistrationActivity"
+            android:exported="true" />
+        <activity
             android:name=".SecondActivity"
             android:exported="true" />
         <activity
