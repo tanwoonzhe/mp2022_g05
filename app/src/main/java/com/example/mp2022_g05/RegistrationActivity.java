@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -51,8 +52,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
                                     sendUserData();
-                                    Toast.makeText(RegistrationActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                                    sendEmailVerification();
 
                                 }else {
                                     Toast.makeText(RegistrationActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
@@ -83,7 +83,7 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private Boolean validate(){
-        Boolean reuslt = false;
+        Boolean result = false;
         name = userName.getText().toString();
         password = userPassword.getText().toString();
         email = userEmail.getText().toString();
@@ -93,10 +93,10 @@ public class RegistrationActivity extends AppCompatActivity {
         if (name.isEmpty() || password.isEmpty() || email.isEmpty() || age.isEmpty()){
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
         } else  {
-            reuslt = true;
+            result = true;
         }
 
-        return reuslt;
+        return result;
     }
 
     private void sendUserData(){
@@ -106,5 +106,23 @@ public class RegistrationActivity extends AppCompatActivity {
         myRef.setValue(userProfile);
     }
 
+    private void sendEmailVerification(){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if (firebaseUser!= null){
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(RegistrationActivity.this, "Successfully register! Email verification is sent",Toast.LENGTH_SHORT).show();
+                        firebaseAuth.signOut();
+                        finish();
+                        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                    }else{
+                        Toast.makeText(RegistrationActivity.this, "Verification email is failed to send", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
 
 }
