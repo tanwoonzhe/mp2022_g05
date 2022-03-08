@@ -1,10 +1,9 @@
-package com.example.mp2022_g05;
+package com.example.testing2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;

@@ -1,7 +1,6 @@
-package com.example.mp2022_g05;
+package com.example.testing2;
 
 public class UserProfile {
-
     public String userName;
     public String userAge;
     public String userEmail;
@@ -12,4 +11,3 @@ public class UserProfile {
         this.userEmail = userEmail;
     }
 }
-

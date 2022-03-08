@@ -1,4 +1,4 @@
-package com.example.mp2022_g05;
+package com.example.testing2;
 
 import org.junit.Test;
 
