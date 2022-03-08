@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testing2">
         <activity
+            android:name=".UpdataPassword"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegistrationActivity"
             android:exported="true" />
         <activity
