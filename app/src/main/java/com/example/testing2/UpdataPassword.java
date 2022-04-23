@@ -29,7 +29,7 @@ public class UpdataPassword extends AppCompatActivity {
         update = (Button) findViewById(R.id.btnUpdatePassword);
         newPassword = (EditText) findViewById(R.id.etNewPassword);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 

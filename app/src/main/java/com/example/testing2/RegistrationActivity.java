@@ -156,8 +156,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
             }
         });
-        UserProfile userProfile = new UserProfile(name, age, email);
+       UserProfile userProfile = new UserProfile(name, age, email);
         myRef.setValue(userProfile);
+
+
     }
 
     private void sendEmailVerification(){

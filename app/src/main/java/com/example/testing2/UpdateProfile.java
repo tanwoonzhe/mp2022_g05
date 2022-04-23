@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,7 +34,8 @@ import java.io.IOException;
 
 public class UpdateProfile extends AppCompatActivity {
 
-    private EditText newUserName, newUserEmail, newUserAge;
+    private EditText newUserName,  newUserAge;
+    private TextView newUserEmail;
     private Button save;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -63,7 +65,7 @@ public class UpdateProfile extends AppCompatActivity {
         setContentView(R.layout.activity_update_profile);
 
         newUserName = (EditText) findViewById(R.id.etNameUpdate);
-        newUserEmail = (EditText) findViewById(R.id.etEmailUpdate);
+        newUserEmail = (TextView) findViewById(R.id.tvEmail);
         newUserAge = (EditText) findViewById(R.id.etAgeUpdate);
         save = (Button) findViewById(R.id.btnSave);
         updateProfilePic = (ImageView)findViewById(R.id.ivProileUpdate);
@@ -72,7 +74,7 @@ public class UpdateProfile extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
 
