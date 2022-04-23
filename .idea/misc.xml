@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26614583333333336" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_password.xml" value="0.264" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_registration.xml" value="0.264" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_second.xml" value="0.264" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_updata_password.xml" value="0.264" />
+        <entry key="..\:/DIP SEM 4/MASTER FOLDER/app/src/main/res/layout/activity_update_profile.xml" value="0.264" />
+
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_main.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_profile.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_registration.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_second.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_updata_password.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/LENOVO/Documents/KX UTM/SEM 4/MP/PROJECT MP/MASTER PROJECT/app/src/main/res/layout/activity_update_profile.xml" value="0.192481884057971" />
+
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_booking.xml" value="0.25" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_booking_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_comfirm_booking.xml" value="0.25" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_password.xml" value="0.19972826086956522" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_profile.xml" value="0.17" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_second.xml" value="0.25" />
+        <entry key="..\:/Users/User/Desktop/MASTER PROJEK GROUP TAN 2022/mp2022_g05/app/src/main/res/layout/activity_update_profile.xml" value="0.2033514492753623" />
+
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05 - Copy/mp2022_g05/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05 - Copy/mp2022_g05/app/src/main/res/layout/activity_update_profile.xml" value="0.25" />
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05 - Copy/mp2022_g05/app/src/main/res/menu/menu.xml" value="0.1" />
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05/mp2022_g05/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05/mp2022_g05/app/src/main/res/layout/activity_updata_password.xml" value="0.2359375" />
+        <entry key="..\:/diploma/sem4/MP/project/MASTER PROJECT G05/mp2022_g05/app/src/main/res/layout/activity_update_profile.xml" value="0.25" />
+        <entry key="..\:/diploma/sem4/MP/project/testing22/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/diploma/sem4/MP/project/testing22/app/src/main/res/layout/activity_password.xml" value="0.1793478260869565" />
+        <entry key="..\:/diploma/sem4/MP/project/testing22/app/src/main/res/layout/activity_registration.xml" value="0.1793478260869565" />
+        <entry key="..\:/diploma/sem4/MP/project/testing22/app/src/main/res/layout/activity_second.xml" value="0.1793478260869565" />
+        <entry key="..\:/diploma/sem4/MP/project/testing22/app/src/main/res/menu/menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

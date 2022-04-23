@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">testing2</string>
+    <string name="title_activity_booking">booking</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string-array name="Buku_array">
+        <item>Rainforest Creatures of Malaysia</item>
+        <item>Pergi Covid-19! Jangan Datang Lagi!</item>
+        <item>Kelembai: Ceritera Tidak Terhikayat</item>
+        <item>Hendak Ke Mana Gagak?</item>
+        <item>Damia dan Kuda Kepang Ajaib</item>
+        <item>Music and My Friends	</item>
+        <item>Gaja Loves The Sea</item>
+        <item>Misi Melur</item>
+        <item>Keris: Warisan Melayu</item>
+        <item>63 Tumbuhan Ubatan</item>
+
+    </string-array>
+
+</resources>
