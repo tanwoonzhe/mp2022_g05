@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.testing2">
+    package="com.example.laibrary">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,36 +11,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Testing2">
+        android:theme="@style/Theme.Laibrary">
         <activity
-            android:name=".BookingHistory"
-            android:exported="false" />
-        <activity
-            android:name=".ComfirmBooking"
-            android:exported="false" />
-        <activity
-            android:name=".Booking"
-            android:exported="false" />
-        <activity
-            android:name=".UpdataPassword"
+            android:name=".ui.book.BookPayment"
             android:exported="true" />
         <activity
-            android:name=".UpdateProfile"
+            android:name=".ui.home.ListOfBookActivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".ui.home.FeedbackActivity"
             android:exported="true" />
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".ui.home.AboutUsPage"
             android:exported="true" />
         <activity
-            android:name=".SecondActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PasswordActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +33,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity android:name=".RegistrationActivity" />
+        <activity
+            android:name=".ui.profile.UpdataPassword"
+            android:exported="true" />
+        <activity
+            android:name=".ui.profile.UpdateProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ui.book.Booking"
+            android:exported="true" />
+        <activity
+            android:name=".ui.book.BookingHistory"
+            android:exported="true" />
+        <activity
+            android:name=".ui.book.ComfirmBooking"
+            android:exported="true" />
     </application>
 
 </manifest>

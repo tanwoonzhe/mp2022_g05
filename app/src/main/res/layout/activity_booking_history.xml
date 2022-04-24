@@ -90,12 +90,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tvR"
         app:layout_constraintVertical_bias="0.209" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="650dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
