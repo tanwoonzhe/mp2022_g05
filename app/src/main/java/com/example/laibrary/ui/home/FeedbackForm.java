@@ -12,7 +12,6 @@ public class FeedbackForm {
     public FeedbackForm(String userFDemail, String userFDfeedback) {
         this.userFDemail = userFDemail;
         this.userFDfeedback = userFDfeedback;
-
     }
 
     public String getUserFDemail() {
@@ -30,5 +29,4 @@ public class FeedbackForm {
     public void setUserFDfeedback(String userFDfeedback) {
         this.userFDfeedback = userFDfeedback;
     }
-
 }

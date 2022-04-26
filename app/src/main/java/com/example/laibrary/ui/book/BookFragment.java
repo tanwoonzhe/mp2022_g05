@@ -47,7 +47,7 @@ public class BookFragment extends Fragment {
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), BookingHistory.class));
+                startActivity(new Intent(getActivity(), BookHistory.class));
             }
         });
 

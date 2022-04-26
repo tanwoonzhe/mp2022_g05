@@ -6,4 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.ListOfBookActivity">
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp">
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

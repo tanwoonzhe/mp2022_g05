@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.laibrary.ui.book.DateDatabase;
 import com.example.laibrary.ui.profile.UserProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -39,11 +40,12 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
     private ImageView userProfilePic;
-    String email, age, name, password;
+    String email, age, name, password, istatus;
     private FirebaseStorage firebaseStorage;
     private static int PICK_IMAGE = 123;
     Uri imagePath;
     private StorageReference storageReference;
+    private FirebaseDatabase firebaseDatabase2;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -69,6 +71,7 @@ public class RegistrationActivity extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
 
         storageReference = firebaseStorage.getReference();
+        firebaseDatabase2 = FirebaseDatabase.getInstance();
 
         userProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -159,6 +162,12 @@ public class RegistrationActivity extends AppCompatActivity {
         });
         UserProfile userProfile = new UserProfile(name, age, email);
         myRef.setValue(userProfile);
+
+        istatus = "0";
+        DatabaseReference databasedate = firebaseDatabase2.getReference("Date").child(firebaseAuth.getUid());
+        DateDatabase dateDatabase = new DateDatabase();
+        dateDatabase.setStatus(istatus);
+        databasedate.setValue(dateDatabase);
     }
 
     private void sendEmailVerification(){

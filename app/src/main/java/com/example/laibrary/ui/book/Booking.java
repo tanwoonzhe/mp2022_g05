@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,12 +19,13 @@ import com.example.laibrary.R;
 
 public class Booking extends AppCompatActivity {
 
-    private EditText fullName,ic,pNumber,quantity,rentDate;
+    private EditText fullName,ic,pNumber,quantity;
     private Spinner BukuSpinner;
-    private Button Bk;
+    private Button Bk, chooseDate;
+    private TextView Rentdate;
     String []Book;
     int index;
-    String  bookName,ifullname,iic,ipnumber,iquantity,irentdate;
+    String  bookName,ifullname,iic,ipnumber,iquantity,irentdate, irentday, irentmonth, irentyear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +36,10 @@ public class Booking extends AppCompatActivity {
         ic = findViewById(R.id.etIc);
         pNumber = findViewById(R.id.etPnumber);
         quantity = findViewById(R.id.etQuantity);
-        rentDate = findViewById(R.id.etRent);
         BukuSpinner = findViewById(R.id.namaBuku);
         Bk = findViewById(R.id.btnBook);
-
+        Rentdate = findViewById(R.id.tvRentDate);
+        chooseDate = findViewById(R.id.btnSetDate);
 
         Book = getResources().getStringArray(R.array.Buku_array);
 
@@ -61,6 +63,15 @@ public class Booking extends AppCompatActivity {
             }
         });
 
+        irentdate = getIntent().getStringExtra("keyrentdate");
+        irentday = getIntent().getStringExtra("keyrentday");
+        irentmonth = getIntent().getStringExtra("keyrentmonth");
+        irentyear = getIntent().getStringExtra("keyrentyear");
+        Rentdate.setText(irentdate);
+
+        Toast.makeText(this, irentday+""+irentmonth+""+irentyear, Toast.LENGTH_SHORT).show();
+
+
         Bk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +80,6 @@ public class Booking extends AppCompatActivity {
                 iic = ic.getText().toString();
                 ipnumber = pNumber.getText().toString();
                 iquantity = quantity.getText().toString();
-                irentdate = rentDate.getText().toString();
 
                 Intent intent = new Intent(Booking.this,ComfirmBooking.class);
                 intent.putExtra("keyfullname",ifullname);
@@ -78,9 +88,18 @@ public class Booking extends AppCompatActivity {
                 intent.putExtra("keyquantity",iquantity);
                 intent.putExtra("keyrentdate",irentdate);
                 intent.putExtra("keybookname",bookName);
-
+                intent.putExtra("keyrentday",irentday);
+                intent.putExtra("keyrentmonth",irentmonth);
+                intent.putExtra("keyrentyear",irentyear);
                 startActivity(intent);
 
+            }
+        });
+
+        chooseDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Booking.this,BookSetDate.class));
             }
         });
 

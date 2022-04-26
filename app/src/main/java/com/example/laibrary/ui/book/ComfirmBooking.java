@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,8 +24,9 @@ public class ComfirmBooking extends AppCompatActivity {
     double price;
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    String ifullname,iicnumber,ipnumber,inbook,iquantity,irentdate,iprice;
+    String ifullname,iicnumber,ipnumber,inbook,iquantity,irentdate,iprice, irentday, irentmonth, irentyear, istatus;
     DatabaseReference databaseReference;
+    private FirebaseDatabase firebaseDatabase2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class ComfirmBooking extends AppCompatActivity {
         change = findViewById(R.id.btnChange);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase2 = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -53,6 +56,11 @@ public class ComfirmBooking extends AppCompatActivity {
         inbook = getIntent().getStringExtra("keybookname");
         iquantity = getIntent().getStringExtra("keyquantity");
         irentdate = getIntent().getStringExtra("keyrentdate");
+        irentyear = getIntent().getStringExtra("keyrentyear");
+        irentday = getIntent().getStringExtra("keyrentday");
+        irentmonth = getIntent().getStringExtra("keyrentmonth");
+
+        Toast.makeText(this, irentday+""+irentmonth+""+irentyear, Toast.LENGTH_SHORT).show();
 
         fullname.setText(ifullname);
         icnumber.setText(iicnumber);
@@ -105,19 +113,43 @@ public class ComfirmBooking extends AppCompatActivity {
         iprice = String.format("%.2f",price);
         total.setText(iprice);
 
-        intent.putExtra("keyTotalPrice",iprice);
-
         comfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = databaseReference.push().getKey();
-                DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Detail").child(firebaseAuth.getUid());
-                BookingDetail bookingDetail = new BookingDetail(id,ifullname,iicnumber,ipnumber,inbook,iquantity,irentdate,iprice);
-                intent.putExtra("keybookingid",id);
-                databaseReference.child(id).setValue(bookingDetail);
 
-                finish();
-                startActivity(new Intent(ComfirmBooking.this,BookPayment.class));
+                String id = databaseReference.push().getKey();
+                istatus = "1";
+                DatabaseReference databasedate = firebaseDatabase2.getReference("Date").child(firebaseAuth.getUid());
+                DateDatabase dateDatabase = new DateDatabase(irentday, irentmonth, irentyear, istatus);
+                databasedate.setValue(dateDatabase);
+
+                //DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Info").child(firebaseAuth.getUid()).child(id);
+                //BookingDetail bookingDetail = new BookingDetail(id,ifullname,iicnumber,ipnumber,inbook,iquantity,irentdate,iprice, irentday, irentmonth, irentyear);
+                //databaseReference.setValue(bookingDetail);
+
+                DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Info").child(firebaseAuth.getUid()).child(id);
+                BookingDetail bookingDetail = new BookingDetail();
+                bookingDetail.setRentday(irentday);
+                bookingDetail.setRentmonth(irentmonth);
+                bookingDetail.setRentyear(irentyear);
+                bookingDetail.setBookingID(id);
+                bookingDetail.setFullname(ifullname);
+                bookingDetail.setIcnumber(iicnumber);
+                bookingDetail.setPhonenumber(ipnumber);
+                bookingDetail.setNamebook(inbook);
+                bookingDetail.setQuantity(iquantity);
+                bookingDetail.setRentdate(irentdate);
+                bookingDetail.setTotal(iprice);
+
+                databaseReference.setValue(bookingDetail);
+
+                Intent intent = new Intent(ComfirmBooking.this,BookPayment.class);
+                intent.putExtra("keybookingid",id);
+                intent.putExtra("keyTotalPrice",iprice);
+
+
+                //finish();
+                startActivity(intent);
             }
         });
 

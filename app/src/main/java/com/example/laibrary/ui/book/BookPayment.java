@@ -4,12 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.laibrary.LoginActivity;
+import com.example.laibrary.MainActivity;
 import com.example.laibrary.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -46,10 +49,15 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
 
         userbookingid = getIntent().getStringExtra("keybookingid");
 
+
         //convert and round off
         //int amount = Math.round(Float.parseFloat(sAmount)*100);
+        int amount = Math.round(Float.parseFloat(userpaymentamount)*100);
+        //int amount = Integer.parseInt(userpaymentamount);
+        Toast.makeText(this,"amount"+ userpaymentamount,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,"id"+userbookingid,Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"amount" +amount,Toast.LENGTH_SHORT).show();
 
-        int amount = Math.round(Float.parseFloat(userpaymentamount));
 
         btpay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,12 +91,16 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
                     object.put("prefill.email", "tanwoonzhe@gmail.com");
                     //open rezorpay checkout activity
                     checkout.open(BookPayment.this, object);
+
                 } catch (JSONException e){
                     e.printStackTrace();
                 }
 
             }
+
         });
+
+
 
     }
 
@@ -102,12 +114,18 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
         builder.setMessage(s);
         //show alert dialog
         builder.show();
+
+        Intent intent = new Intent(BookPayment.this, MainActivity.class);
+        intent.putExtra("keyid",userbookingid);
+
+
+        startActivity(intent);
         DatabaseReference databaseReference = firebaseDatabase.getReference("Payment Detail").child(userbookingid);
         payment payment = new payment(userbookingid,s);
 
         databaseReference.setValue(payment);
 
-        finish();
+        //finish();
 
     }
 

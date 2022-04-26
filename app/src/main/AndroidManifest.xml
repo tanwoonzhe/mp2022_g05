@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laibrary">
         <activity
+            android:name=".ui.book.BookSetDate"
+            android:exported="true" />
+        <activity
+            android:name=".ui.book.bookinglist"
+            android:exported="true" />
+        <activity
+            android:name=".ui.book.BookHistory"
+            android:exported="true" />
+        <activity
             android:name=".ui.book.BookPayment"
             android:exported="true" />
         <activity
@@ -46,9 +55,6 @@
             android:exported="true" />
         <activity
             android:name=".ui.book.Booking"
-            android:exported="true" />
-        <activity
-            android:name=".ui.book.BookingHistory"
             android:exported="true" />
         <activity
             android:name=".ui.book.ComfirmBooking"

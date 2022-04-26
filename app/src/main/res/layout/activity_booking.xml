@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Booking">
+    tools:context=".ui.book.Booking">
 
     <EditText
         android:id="@+id/etFullName"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.168" />
 
     <Spinner
         android:id="@+id/namaBuku"
@@ -32,18 +32,6 @@
         app:layout_constraintTop_toBottomOf="@+id/etPnumber"
         app:layout_constraintVertical_bias="0.148" />
 
-    <TextView
-        android:id="@+id/tvReturn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="return before 2 weeks after rental"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRent"
-        app:layout_constraintVertical_bias="0.259" />
-
     <Button
         android:id="@+id/btnBook"
         android:layout_width="wrap_content"
@@ -53,8 +41,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReturn"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintTop_toBottomOf="@+id/etQuantity"
+        app:layout_constraintVertical_bias="0.405" />
 
     <TextView
         android:id="@+id/textView5"
@@ -112,20 +100,6 @@
         app:layout_constraintTop_toBottomOf="@+id/namaBuku"
         app:layout_constraintVertical_bias="0.083" />
 
-    <EditText
-        android:id="@+id/etRent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="DD/MM/YY"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQuantity"
-        app:layout_constraintVertical_bias="0.099" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -136,4 +110,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPnumber"
         app:layout_constraintVertical_bias="0.333" />
+
+    <Button
+        android:id="@+id/btnSetDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="choose date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toEndOf="@+id/tvRentDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <TextView
+        android:id="@+id/tvRentDate"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,15 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_about_us_page.xml" value="0.264" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_book_history.xml" value="0.2" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_book_payment.xml" value="0.15526315789473685" />
-        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_booking.xml" value="0.2057017543859649" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_book_set_date.xml" value="0.21052631578947367" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_booking.xml" value="0.264" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_booking_history.xml" value="0.21052631578947367" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_bookinglist.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_comfirm_booking.xml" value="0.4" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_feedback.xml" value="0.1986842105263158" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_list_of_book.xml" value="0.2074561403508772" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_login2.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_password.xml" value="0.17481884057971014" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_registration.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_room_boooking_form.xml" value="0.264" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_room_confirm_page.xml" value="0.264" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/activity_room_receipt.xml" value="0.21052631578947367" />
@@ -24,8 +29,12 @@
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/fragment_login.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/fragment_profile.xml" value="0.176" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/fragment_studyroom.xml" value="0.17481884057971014" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/item.xml" value="0.2" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/layout/list_layout.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24635416666666668" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/menu/menu.xml" value="0.2074561403508772" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/menu/menurefresh.xml" value="0.21052631578947367" />
+        <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/menu/option_menu.xml" value="0.21052631578947367" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22412280701754386" />
         <entry key="..\:/diploma/sem4/MP/androidStudio/testing4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22412280701754386" />
       </map>
