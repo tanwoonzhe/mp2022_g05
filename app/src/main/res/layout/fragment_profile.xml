@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background3"
     tools:context=".ui.profile.ProfileFragment">
 
     <Button
         android:id="@+id/btnDeleteAcc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Delete Account"
+        android:textColor="#E91E63"
+        android:textSize="12sp"
+        app:backgroundTint="@color/black"
+        app:icon="@android:drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnChangePassword"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <ImageView
         android:id="@+id/ivProfilePic"
@@ -34,76 +41,110 @@
         android:id="@+id/tvProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
         android:text="Name:"
         android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivProfilePic"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/tvProfileAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
         android:text="Age:"
         android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileName"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/tvProfileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
         android:text="Email:"
-        android:textSize="22dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileAge"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnProfileUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Edit Profile"
+        android:textColor="#03A9F4"
+        android:textSize="12sp"
+        app:backgroundTint="@color/black"
+        app:icon="@android:drawable/ic_menu_save"
+        app:iconSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileEmail"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/btnChangePassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Change Password"
+        android:textColor="#4CAF50"
+        android:textSize="12sp"
+        app:backgroundTint="@color/black"
+        app:icon="@android:drawable/ic_lock_lock"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toEndOf="@+id/btnProfileUpdate"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileEmail"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/btnProfileLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Logout"
+        android:textColor="#FFEB3B"
+        app:backgroundTint="@color/black"
+        app:icon="@android:drawable/ic_lock_power_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.298"
         app:layout_constraintStart_toEndOf="@+id/btnDeleteAcc"
         app:layout_constraintTop_toBottomOf="@+id/btnChangePassword"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="PROFILE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

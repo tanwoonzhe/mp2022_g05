@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laibrary">
         <activity
+            android:name=".SplashScreen"
+            android:exported="true" />
+        <activity
             android:name=".ui.book.BookSetDate"
             android:exported="true" />
         <activity
@@ -59,6 +62,10 @@
         <activity
             android:name=".ui.book.ComfirmBooking"
             android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

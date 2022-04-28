@@ -4,28 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.book.BookFragment">
 
     <Button
         android:id="@+id/btnBooking"
         android:layout_width="315dp"
         android:layout_height="132dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Booking"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:icon="@android:drawable/ic_menu_gallery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.391" />
 
     <Button
         android:id="@+id/btnHistory"
         android:layout_width="316dp"
         android:layout_height="125dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Booking History"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:icon="@android:drawable/ic_menu_recent_history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnBooking"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.195" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="BOOK"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,41 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ui.home.HomeFragment">
 
     <Button
         android:id="@+id/btnFeedback"
-        android:layout_width="138dp"
-        android:layout_height="134dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="Feedback"
+        android:textColor="#2196F3"
+        app:backgroundTint="#000000"
+        app:icon="@android:drawable/ic_menu_edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/btnAboutUs"
         app:layout_constraintTop_toBottomOf="@+id/btnListOfBook"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintVertical_bias="0.213" />
 
     <Button
         android:id="@+id/btnListOfBook"
         android:layout_width="324dp"
         android:layout_height="130dp"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="List of Book"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        app:backgroundTint="#000000"
+        app:icon="@android:drawable/ic_dialog_dialer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.34" />
 
     <Button
         android:id="@+id/btnAboutUs"
-        android:layout_width="138dp"
-        android:layout_height="134dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component35"
+        android:fontFamily="@font/architects_daughter"
         android:text="About Us"
+        android:textColor="#2196F3"
+        app:backgroundTint="#000000"
+        app:icon="@android:drawable/ic_dialog_info"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnListOfBook"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintVertical_bias="0.213" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="HOME"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
