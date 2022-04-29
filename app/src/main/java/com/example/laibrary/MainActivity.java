@@ -86,13 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
         bookingid = getIntent().getStringExtra("keyid");
 
-        //calendar = Calendar.getInstance();
-        //currentyear = calendar.get(Calender.);
-        //Date dd = new Date();
-        //currentyear = dd.getYear();
-        //currentmonth = dd.getMonth();
-        //currentday = dd.getDay();
-        //Toast.makeText(MainActivity.this, "day"+currentday+" month"+ currentmonth+" year"+ currentyear, Toast.LENGTH_SHORT).show();
         Calendar instance = Calendar.getInstance();
         currentmonth = instance.get(Calendar.MONTH)+1;
         currentyear = instance.get(Calendar.YEAR);
@@ -107,12 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 String day = dateDatabase.getDay();
                 String month = dateDatabase.getMonth();
                 String year = dateDatabase.getYear();
-/*
-                idday = Integer.parseInt(day);
-                idmonth = Integer.parseInt(month);
-                idyear = Integer.parseInt(year);
-
- */
 
                 if(day !=null || month != null || year != null){
                     idday = Integer.parseInt(day);
@@ -124,13 +111,10 @@ public class MainActivity extends AppCompatActivity {
                     idyear = 0;
                 }
 
-                //Toast.makeText(MainActivity.this, day+month+year, Toast.LENGTH_SHORT).show();
                 String status = dateDatabase.getStatus();
-                //Toast.makeText(MainActivity.this, status, Toast.LENGTH_SHORT).show();
 
                 if(status.equals("1")){
 
-                    //newmonth = (idmonth+1)%12;
                     newmonth = idmonth+1;
                     newyear = idyear;
                     newday = idday;
@@ -148,19 +132,16 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
-                    Toast.makeText(MainActivity.this, newday+" "+ newmonth+" "+ newyear, Toast.LENGTH_SHORT).show();
-
                     if ((currentday == newday) && (currentmonth == newmonth) && (currentyear == newyear)){
-                        Toast.makeText(MainActivity.this, "im here", Toast.LENGTH_SHORT).show();
 
                         Intent notificationIntent = new Intent(MainActivity.this, MainActivity.class);
                         PendingIntent pi = PendingIntent.getActivity(MainActivity.this, 0, notificationIntent, 0);
 
                         NotificationCompat.Builder notification = new NotificationCompat.Builder(MainActivity.this)
-                                .setContentTitle("Baby is Active!!")
-                                .setContentText("Your baby is awake")
-                                .setSmallIcon(android.R.drawable.stat_notify_error).setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher))
-                                .setColor(getResources().getColor(R.color.colorAccent))
+                                .setContentTitle("Laibrary App")
+                                .setContentText("Today is the deadline returning book. Remember to return your book by today.")
+                                .setSmallIcon(R.drawable.favicon).setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.logo))
+                                .setColor(getResources().getColor(R.color.wallet_holo_blue_light))
                                 .setVibrate(new long[]{0, 300, 300, 300})
                                 .setLights(Color.WHITE, 1000, 5000)
                                 .setContentIntent(pi)
@@ -182,10 +163,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
-
-
 }
 

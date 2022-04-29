@@ -58,10 +58,6 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }
 
-        //firebaseAuth.signOut();
-        //finish();
-        //startActivity(new Intent(this, LoginActivity.class));
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,9 +119,6 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "verified", Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            //Fragment secondfrag = new testing2();
-            //FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
-            //fragmentTransaction.replace(R.id.container, secondfrag).commit();
         }else {
             Toast.makeText(this, "Verify your email.", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();

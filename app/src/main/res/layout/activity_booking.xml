@@ -6,51 +6,9 @@
     android:layout_height="match_parent"
 
     android:background="@drawable/background3"
-    tools:context=".ui.book.Booking">
-
-
-    <EditText
-        android:id="@+id/etFullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/component19"
-        android:ems="10"
-        android:hint="Enter Full Name"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-
-        app:layout_constraintVertical_bias="0.168" />
-
-
-    <Spinner
-        android:id="@+id/namaBuku"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPnumber"
-        app:layout_constraintVertical_bias="0.135" />
-
-    <TextView
-        android:id="@+id/tvReturn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/architects_daughter"
-        android:text="Return before 2 weeks after rental"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRent"
-        app:layout_constraintVertical_bias="0.263" />
+    tools:context=".ui.book.Booking"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="47dp">
 
 
     <Button
@@ -68,13 +26,14 @@
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/etQuantity"
-        app:layout_constraintVertical_bias="0.67" />
+        app:layout_constraintVertical_bias="0.535" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/component38"
+        android:fontFamily="@font/architects_daughter"
+        android:text="BOOKING FORM"
         android:textColor="#000000"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -82,38 +41,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <EditText
-        android:id="@+id/etIc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/component19"
-        android:ems="10"
-        android:hint="Enter IC Number"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etFullName"
         app:layout_constraintVertical_bias="0.053" />
 
-    <EditText
-        android:id="@+id/etPnumber"
+
+    <Button
+        android:id="@+id/btnSetDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/component19"
-        android:ems="10"
-        android:hint="Enter Phone Number"
-        android:inputType="number"
-        android:textAlignment="center"
+        android:background="@drawable/component35"
+        android:text="choose date"
+        app:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIc"
-        app:layout_constraintVertical_bias="0.073" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.154" />
 
     <EditText
         android:id="@+id/etQuantity"
@@ -123,27 +66,25 @@
         android:ems="10"
         android:hint="Enter Quantity"
         android:inputType="number"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namaBuku"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.065" />
 
-    <EditText
-        android:id="@+id/etRent"
+    <Spinner
+        android:id="@+id/namaBuku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/component19"
-        android:ems="10"
-        android:hint="DD/MM/YY"
-        android:inputType="date"
-        android:textAlignment="center"
+        android:drawSelectorOnTop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etQuantity"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintTop_toBottomOf="@+id/etPnumber"
+        app:layout_constraintVertical_bias="0.168" />
 
     <TextView
         android:id="@+id/textView6"
@@ -152,34 +93,75 @@
         android:text="Book: "
         app:layout_constraintBottom_toTopOf="@+id/etQuantity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPnumber"
 
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.261" />
 
-    <Button
-        android:id="@+id/btnSetDate"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etPnumber"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="choose date"
+        android:background="@drawable/component19"
+        android:ems="10"
+        android:hint="Enter Phone Number"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toEndOf="@+id/tvRentDate"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIc"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <EditText
+        android:id="@+id/etIc"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component19"
+        android:ems="10"
+        android:hint="Enter IC Number"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFullName"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/component19"
+        android:ems="10"
+        android:hint="Enter Full Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.317" />
 
     <TextView
         android:id="@+id/tvRentDate"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="122dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/architects_daughter"
         android:text="date"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etFullName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintStart_toEndOf="@+id/btnSetDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.666" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

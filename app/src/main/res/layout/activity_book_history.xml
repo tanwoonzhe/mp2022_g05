@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="45dp"
+    android:paddingLeft="20dp"
     android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context=".ui.book.BookHistory">
+    android:paddingTop="40dp"
+    tools:context=".ui.book.BookHistory"
+    android:background="@drawable/background3">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/BookingList"
         android:layout_width="391dp"
-        android:layout_height="827dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -9,10 +9,9 @@
 
     <EditText
         android:id="@+id/etUserName"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
-        android:drawableLeft="@android:drawable/btn_star"
         android:ems="10"
         android:fontFamily="@font/architects_daughter"
         android:hint="Name"
@@ -28,7 +27,7 @@
 
     <EditText
         android:id="@+id/etUserEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component39"
         android:ems="10"
@@ -46,7 +45,7 @@
 
     <EditText
         android:id="@+id/etUserPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
         android:drawableLeft="@android:drawable/ic_lock_idle_lock"
@@ -58,10 +57,9 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUserEmail"
-        app:layout_constraintVertical_bias="0.044" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
         android:id="@+id/btnRegister"
@@ -95,7 +93,7 @@
 
     <EditText
         android:id="@+id/etAge"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
         android:drawableLeft="@android:drawable/ic_menu_view"
@@ -103,6 +101,7 @@
         android:fontFamily="@font/architects_daughter"
         android:hint="Age"
         android:inputType="number"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
         app:layout_constraintEnd_toEndOf="parent"

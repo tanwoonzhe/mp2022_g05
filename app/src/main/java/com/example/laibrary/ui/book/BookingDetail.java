@@ -13,7 +13,8 @@ public class BookingDetail {
     public BookingDetail() {
     }
 
-    public BookingDetail(String bookingID, String fullname, String icnumber, String phonenumber, String namebook, String quantity, String rentdate, String total, String rentday, String rentmonth, String rentyear) {
+    public BookingDetail(String bookingID, String fullname, String icnumber, String phonenumber, String namebook,
+                         String quantity, String rentdate, String total, String rentday, String rentmonth, String rentyear) {
         this.bookingID = bookingID;
         this.fullname = fullname;
         this.icnumber = icnumber;

@@ -63,6 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.displayrentdate.setText(bookingDetail.getRentdate());
         holder.displaytotal.setText(bookingDetail.getTotal());
         String delboookingID = bookingDetail.getBookingID();
+        holder.displayid.setText(bookingDetail.getBookingID());
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -74,8 +75,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     case R.id.menu_remove:
                         //BookingDetail bookingDetail1 = new BookingDetail();
                         Toast.makeText(context, delboookingID, Toast.LENGTH_SHORT).show();
-                        DatabaseReference delbookinginfo= FirebaseDatabase.getInstance().getReference("Booking Info").child(firebaseAuth.getUid()).child(delboookingID);
-                        DatabaseReference delPayment= FirebaseDatabase.getInstance().getReference("Payment Detail").child(delboookingID);
+                        DatabaseReference delbookinginfo= FirebaseDatabase.getInstance().getReference("Booking Info").
+                                child(firebaseAuth.getUid()).child(delboookingID);
+                        DatabaseReference delPayment= FirebaseDatabase.getInstance().getReference("Payment Detail").
+                                child(delboookingID);
 
                         delbookinginfo.removeValue();
                         delPayment.removeValue().addOnSuccessListener(suc ->{
@@ -86,8 +89,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                             //((Activity)context).finish();
                             //Intent intent = new Intent(MyAdapter.this,Booking.class );
                             //context.startActivity(intent);
-
-
 
                         }).addOnFailureListener(er ->{
                             Toast.makeText(context, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
@@ -100,9 +101,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             popupMenu.show();
         });
 
-
-
-
     }
 
     @Override
@@ -112,7 +110,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView displayname, displayic, displayphone, displaybook, displayquantity, displayrentdate, displaytotal,txt_option;
+        TextView displayname, displayic, displayphone, displaybook, displayquantity, displayrentdate, displaytotal, displayid,txt_option;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -125,11 +123,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             displayrentdate = itemView.findViewById(R.id.tvrentdate);
             displaytotal = itemView.findViewById(R.id.tvlisttotal);
             txt_option = itemView.findViewById(R.id.txt_option);
+            displayid = itemView.findViewById(R.id.tvbookid);
 
         }
     }
-
-
-
 
 }

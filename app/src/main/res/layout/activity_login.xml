@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background3"
     tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component39"
         android:ems="10"
@@ -26,7 +26,7 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
         android:drawableLeft="@android:drawable/ic_lock_idle_lock"
@@ -61,17 +61,16 @@
 
     <TextView
         android:id="@+id/tvInfo"
-        android:layout_width="245dp"
-        android:layout_height="54dp"
+        android:layout_width="271dp"
+        android:layout_height="43dp"
         android:fontFamily="@font/architects_daughter"
-        android:text="No of sttemps remaining: "
+        android:text="No of sttempts remaining: "
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0.316" />
+        app:layout_constraintVertical_bias="0.313" />
 
     <TextView
         android:id="@+id/tvRegister"
@@ -96,10 +95,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.027" />
 
     <TextView
         android:id="@+id/textView3"
@@ -115,5 +114,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="257dp"
+        android:layout_height="263dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/logo_transparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

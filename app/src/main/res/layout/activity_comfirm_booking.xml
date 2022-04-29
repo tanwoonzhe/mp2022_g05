@@ -5,118 +5,128 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    tools:context=".ComfirmBooking">
+    tools:context="ui.book.ComfirmBooking"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="26dp">
 
     <TextView
         android:id="@+id/tvFullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="Name"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11" />
+        app:layout_constraintVertical_bias="0.185" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
+        android:text="Full Name:"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
     <TextView
         android:id="@+id/tvIc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="IC Number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFullName"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/tvPnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="Phone Number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvIc"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <TextView
         android:id="@+id/tvbname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="Book name"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPnumber"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <TextView
         android:id="@+id/tvQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="Quantity"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvbname"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/tvRent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/component19"
-        android:hint="Rent date"
+        android:gravity="center"
+        android:hint="Quantity"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuantity"
-        app:layout_constraintVertical_bias="0.104" />
-
-    <TextView
-        android:id="@+id/tvReTurn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/component19"
-        android:hint="Return Date"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.912"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintTop_toBottomOf="@+id/tvbname"
+        app:layout_constraintVertical_bias="0.303" />
 
     <TextView
         android:id="@+id/tvTotal"
-        android:layout_width="65dp"
-        android:layout_height="15dp"
+        android:layout_width="103dp"
+        android:layout_height="36dp"
         android:background="@drawable/component19"
+        android:gravity="center"
         android:hint="Total"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvReTurn"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuantity"
+        app:layout_constraintVertical_bias="0.354" />
 
     <Button
         android:id="@+id/btnComfirm"
@@ -144,10 +154,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/tvQuantity"
         app:layout_constraintEnd_toStartOf="@+id/tvbname"
-        app:layout_constraintHorizontal_bias="0.401"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPnumber"
-        app:layout_constraintVertical_bias="0.402" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <Button
         android:id="@+id/btnChange"
@@ -168,20 +178,6 @@
         app:layout_constraintVertical_bias="0.477" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/architects_daughter"
-        android:text="Full Name:"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.119" />
-
-    <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,10 +186,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.213" />
+        app:layout_constraintVertical_bias="0.276" />
 
     <TextView
         android:id="@+id/textView10"
@@ -204,10 +200,10 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <TextView
         android:id="@+id/textView11"
@@ -218,54 +214,40 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/architects_daughter"
-        android:text="Rent Date:"
+        android:text="Rent date:"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.141" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/architects_daughter"
-        android:text="Return Date"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.322" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/architects_daughter"
-        android:text="Total:"
+        android:text="Total(RM):"
         android:textColor="#000000"
         android:textColorHighlight="#000000"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.365" />
 
     <TextView
         android:id="@+id/textView15"
@@ -274,7 +256,7 @@
         android:fontFamily="@font/architects_daughter"
         android:text="CONFIRM BOOKING"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

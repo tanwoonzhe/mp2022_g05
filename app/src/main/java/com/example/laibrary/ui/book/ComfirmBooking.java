@@ -38,11 +38,10 @@ public class ComfirmBooking extends AppCompatActivity {
         pnumber = findViewById(R.id.tvPnumber);
         nbook = findViewById(R.id.tvbname);
         quantity = findViewById(R.id.tvQuantity);
-        rentdate = findViewById(R.id.tvRent);
-        turndate = findViewById(R.id.tvReTurn);
         total = findViewById(R.id.tvTotal);
         comfirm = findViewById(R.id.btnComfirm);
         change = findViewById(R.id.btnChange);
+        rentdate = findViewById(R.id.tvRent);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseDatabase2 = FirebaseDatabase.getInstance();
@@ -59,8 +58,6 @@ public class ComfirmBooking extends AppCompatActivity {
         irentyear = getIntent().getStringExtra("keyrentyear");
         irentday = getIntent().getStringExtra("keyrentday");
         irentmonth = getIntent().getStringExtra("keyrentmonth");
-
-        Toast.makeText(this, irentday+""+irentmonth+""+irentyear, Toast.LENGTH_SHORT).show();
 
         fullname.setText(ifullname);
         icnumber.setText(iicnumber);
@@ -123,11 +120,8 @@ public class ComfirmBooking extends AppCompatActivity {
                 DateDatabase dateDatabase = new DateDatabase(irentday, irentmonth, irentyear, istatus);
                 databasedate.setValue(dateDatabase);
 
-                //DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Info").child(firebaseAuth.getUid()).child(id);
-                //BookingDetail bookingDetail = new BookingDetail(id,ifullname,iicnumber,ipnumber,inbook,iquantity,irentdate,iprice, irentday, irentmonth, irentyear);
-                //databaseReference.setValue(bookingDetail);
-
-                DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Info").child(firebaseAuth.getUid()).child(id);
+                DatabaseReference databaseReference = firebaseDatabase.getReference("Booking Info").
+                        child(firebaseAuth.getUid()).child(id);
                 BookingDetail bookingDetail = new BookingDetail();
                 bookingDetail.setRentday(irentday);
                 bookingDetail.setRentmonth(irentmonth);

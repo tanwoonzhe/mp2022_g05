@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".ui.book.BookPayment">
+    tools:context=".ui.book.BookPayment"
+    >
 
     <ImageView
         android:layout_width="match_parent"
@@ -15,10 +16,12 @@
         android:src="@drawable/rzp_logo" />
 
     <Button
+        android:id="@+id/bt_pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/bt_pay"
-        android:text="Pay" />
+        android:background="@drawable/component35"
+        android:text="Pay"
+        app:backgroundTint="#000000" />
 
 
 </LinearLayout>

@@ -51,13 +51,8 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
 
 
         //convert and round off
-        //int amount = Math.round(Float.parseFloat(sAmount)*100);
-        int amount = Math.round(Float.parseFloat(userpaymentamount)*100);
-        //int amount = Integer.parseInt(userpaymentamount);
-        Toast.makeText(this,"amount"+ userpaymentamount,Toast.LENGTH_SHORT).show();
-        //Toast.makeText(this,"id"+userbookingid,Toast.LENGTH_SHORT).show();
-        Toast.makeText(this,"amount" +amount,Toast.LENGTH_SHORT).show();
 
+        int amount = Math.round(Float.parseFloat(userpaymentamount)*100);
 
         btpay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,12 +90,8 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
                 } catch (JSONException e){
                     e.printStackTrace();
                 }
-
             }
-
         });
-
-
 
     }
 
@@ -115,10 +106,10 @@ public class BookPayment extends AppCompatActivity implements PaymentResultListe
         //show alert dialog
         builder.show();
 
-        Intent intent = new Intent(BookPayment.this, MainActivity.class);
+        Intent intent = new Intent(BookPayment.this, BookingReceipt.class);
         intent.putExtra("keyid",userbookingid);
-
-
+        intent.putExtra("keypaymentid",s);
+        intent.putExtra("keyamount",userpaymentamount);
         startActivity(intent);
         DatabaseReference databaseReference = firebaseDatabase.getReference("Payment Detail").child(userbookingid);
         payment payment = new payment(userbookingid,s);

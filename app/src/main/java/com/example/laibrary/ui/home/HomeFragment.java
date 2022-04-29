@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -17,18 +18,19 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+
     private FragmentHomeBinding binding;
     Button feedback, listofbook, aboutus;
     private FirebaseAuth firebaseAuth;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        //((AppCompatActivity) getActivity()).getSupportActionBar().hide();
 
         View view = inflater.inflate(R.layout.fragment_home, container,false);
 
@@ -53,7 +55,7 @@ public class HomeFragment extends Fragment {
         listofbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getActivity(), ListOfBookActivity.class));
             }
         });
 
@@ -67,6 +69,4 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
-
 }

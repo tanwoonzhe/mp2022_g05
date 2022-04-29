@@ -44,7 +44,8 @@ public class PasswordActivity extends AppCompatActivity {
                                 Toast.makeText(PasswordActivity.this, "Password reset email sent", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(PasswordActivity.this, LoginActivity.class));
                             }else{
-                                Toast.makeText(PasswordActivity.this, "Error in sending password reset email.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PasswordActivity.this, "Error in sending password reset email.",
+                                        Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

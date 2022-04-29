@@ -69,9 +69,6 @@ public class Booking extends AppCompatActivity {
         irentyear = getIntent().getStringExtra("keyrentyear");
         Rentdate.setText(irentdate);
 
-        Toast.makeText(this, irentday+""+irentmonth+""+irentyear, Toast.LENGTH_SHORT).show();
-
-
         Bk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

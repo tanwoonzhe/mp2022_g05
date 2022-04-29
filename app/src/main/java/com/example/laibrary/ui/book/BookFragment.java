@@ -20,14 +20,12 @@ import com.example.laibrary.ui.home.FeedbackActivity;
 
 public class BookFragment extends Fragment {
 
-    private BookViewModel bookViewModel;
+
     private FragmentBookBinding binding;
     Button booking, history;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        bookViewModel =
-                new ViewModelProvider(this).get(BookViewModel.class);
 
         binding = FragmentBookBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

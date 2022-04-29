@@ -19,7 +19,6 @@ public class BookSetDate extends AppCompatActivity {
     String date, sday, smonth, syear;
     DatePicker datePicker;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

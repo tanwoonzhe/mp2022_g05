@@ -20,12 +20,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.31" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <DatePicker
         android:id="@+id/datepicker"
-        android:layout_width="359dp"
-        android:layout_height="443dp"
+        android:layout_width="334dp"
+        android:layout_height="426dp"
+        android:background="#AAF1FA"
+        android:headerBackground="@color/wallet_bright_foreground_holo_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,24 +38,29 @@
         android:id="@+id/tvSetDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/architects_daughter"
         android:text="Set Booking Date"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="325dp"
         android:layout_height="44dp"
+        android:fontFamily="@font/architects_daughter"
         android:text="Choose Carefully. You need to return the book in 1 month upon rent date."
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datepicker"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.217"
+        android:textAlignment="center"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

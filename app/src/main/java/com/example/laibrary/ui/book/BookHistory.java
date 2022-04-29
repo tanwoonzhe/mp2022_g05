@@ -57,7 +57,7 @@ public class BookHistory extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         refresh = findViewById(R.id.btnrefresh);
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this, list);
@@ -95,25 +95,14 @@ public class BookHistory extends AppCompatActivity {
         startActivity(getIntent());
         overridePendingTransition(0, 0);
     }
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        finish();
-        getMenuInflater().inflate(R.menu.menurefresh, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         switch (item.getItemId()){
-            case R.id.menurefresh:{
-                refresh();
-            }
-
+            case android.R.id.home:
+                onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
 
- */
 }
